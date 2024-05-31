@@ -46,7 +46,7 @@ const images = [
   },
 ];
 
-function SwipeableTextMobileStepper() {
+function Banner() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -104,15 +104,13 @@ function SwipeableTextMobileStepper() {
         <Typography>{images[activeStep].label}</Typography>
       </Paper>
       <MobileStepper
-        steps={maxSteps}
+        variant="progress"
+        steps={6}
         position="static"
         activeStep={activeStep}
+        sx={{ maxWidth: 1180, flexGrow: 1 }}
         nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
+          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
             Next
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
@@ -136,4 +134,4 @@ function SwipeableTextMobileStepper() {
   );
 }
 
-export default SwipeableTextMobileStepper;
+export default Banner;

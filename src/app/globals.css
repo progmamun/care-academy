@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: var(--font-inter);
+}
+
+h1 {
+  font-family: var(--font-roboto-mono);
+}
 /*
 colors: 
 1. #a2d2ff - blue
